@@ -16,7 +16,8 @@ export default {
   props: {
     title: String,
   },
-  computed: {},
+  computed: {
+  },
   watch: {},
   methods: {},
   created() {},

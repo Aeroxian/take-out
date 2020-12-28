@@ -7,11 +7,23 @@
 
 <script>
 import FooterGuide from "./components/FooterGuide/FooterGuide.vue";
+// import {reqFoodCategorys,reqAddress} from "./api"
+import { mapActions } from 'vuex';
 export default {
   name: "App",
   components: {
     FooterGuide,
   },
+  mounted(){ //async
+    // this.$store.dispatch('getAddress')
+    // const result =await reqFoodCategorys()
+    // console.log(result);
+    this.getAddress()
+    this.getUserInfo()
+  },
+  methods:{
+    ...mapActions(['getAddress','getUserInfo'])
+  }
 };
 </script>
 
